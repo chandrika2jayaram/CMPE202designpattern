@@ -1,0 +1,14 @@
+package edu.sjsu.library.template;
+
+public class TemplateClient {
+	public static void main (String[] args)
+	{
+		Add add = new Add();
+		Delete delete = new Delete();
+		
+		System.out.println("Adding a new item ");
+		add.crudMember();
+		delete.crudMember();
+	}
+
+}
