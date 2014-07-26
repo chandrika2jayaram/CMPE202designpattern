@@ -1,0 +1,41 @@
+package edu.sjsu.library.template;
+
+public abstract class MemberTemplate {
+	private int numItem;
+	void crudMember(){
+		find();
+		borrow();
+		update();
+		delete();
+		setnumItem(numItem);
+			
+	}
+	
+	
+	private void setnumItem(int value) {
+		// TODO Auto-generated method stub
+		numItem=value;
+	}
+
+	void find(){
+		System.out.println("Searching an Item");
+	}
+	
+	void borrow(){
+		System.out.println("Borrowing an Item");
+				
+	}
+	
+	
+	abstract void update();
+	
+	boolean transaction(){
+		return true;
+	}
+	
+	void delete(){
+		System.out.println("deleted an Item");
+	}
+
+}
+ 
