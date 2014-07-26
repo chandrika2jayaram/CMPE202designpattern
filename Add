@@ -1,0 +1,20 @@
+package edu.sjsu.library.template;
+
+public class Add extends MemberTemplate{
+
+	public void borrow(){
+		
+		System.out.println("Borrow an item ");
+			
+	}
+	@Override
+	void update() {
+				
+		System.out.println("updated member account with items borrowed" );
+		
+				
+	}
+	void delete(){
+		System.out.println("No items returned");
+	}
+	
