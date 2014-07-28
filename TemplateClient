@@ -3,12 +3,22 @@ package edu.sjsu.library.template;
 public class TemplateClient {
 	public static void main (String[] args)
 	{
+		Search search = new Search();
 		Add add = new Add();
 		Delete delete = new Delete();
+		Update update = new Update();
 		
-		System.out.println("Adding a new item ");
+		System.out.println("\n Searching an item ");
+		search.crudMember();
+		
+		System.out.println("\n Adding item ");
 		add.crudMember();
+		
+		System.out.println("\n Removing item ");
 		delete.crudMember();
+		
+		System.out.println("\n updating number of items ");
+		update.crudMember();
 	}
 
 }
