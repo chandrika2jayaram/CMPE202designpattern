@@ -1,0 +1,35 @@
+package edu.sjsu.library.template;
+
+public class Add extends MemberTemplate{
+	
+	
+	public void borrow(int numItem, int numBorrow){
+		
+		System.out.println("Borrowed item ");
+		numItem = numItem + numBorrow;
+		//return numItem;
+		//System.out.println("items borrowed : " + (numItem + numBorrow));
+			
+	}
+	
+	
+	void renew(int numItem, int numRenew){
+		System.out.println(" Renewed item ");
+		numItem = numItem - numRenew;
+		//return numRenew;
+		
+	}
+	
+	
+	void update(int numItem, int numBorrow, int numReturn) {
+				
+		System.out.println("update member account with items borrowed and renewed" );
+		//return numItem;
+				
+	}
+
+
+	void returnItem(int numItem, int numReturn) {
+		System.out.println("No item returned");
+		
+	}
