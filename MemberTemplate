@@ -1,41 +1,49 @@
 package edu.sjsu.library.template;
 
 public abstract class MemberTemplate {
-	private int numItem;
+	private int numItem =0;
+	private int numBorrow =0;
+	private int numReturn=0;
+	private int numRenew = 0;
+	//private int i;
 	void crudMember(){
 		find();
-		borrow();
-		update();
-		delete();
-		setnumItem(numItem);
+		select();
+		borrow(numItem, numBorrow);
+		returnItem(numItem, numReturn);
+		renew(numItem, numRenew);
+		update(numItem, numBorrow, numReturn);
+		//setnumItem(numItem);
 			
 	}
+		
 	
+	void find()
+	{
+		System.out.println("Perform search");
+	}
 	
-	private void setnumItem(int value) {
-		// TODO Auto-generated method stub
-		numItem=value;
+	void select() 
+	{
+		
+	System.out.println("select an Item");
+		
 	}
 
-	void find(){
-		System.out.println("Searching an Item");
-	}
 	
-	void borrow(){
-		System.out.println("Borrowing an Item");
-				
-	}
+	abstract void borrow(int numItem, int numBorrow);
+
 	
+	abstract void update(int numItem, int numBorrow, int numReturn);
 	
-	abstract void update();
+
+	abstract void returnItem(int numItem, int numReturn);
+
+	 abstract void renew(int numItem, int numRenew);
+	 
+	 }
+	 
 	
-	boolean transaction(){
-		return true;
-	}
-	
-	void delete(){
-		System.out.println("deleted an Item");
-	}
+
 
 }
- 
