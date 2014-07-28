@@ -2,28 +2,31 @@ package edu.sjsu.library.template;
 
 public class Delete extends MemberTemplate{
 
-	int numItem = 3;
-	private boolean returnItem;
-		public void borrow(){
-			System.out.println("Returning a borrowed Item");
+public void borrow(int numItem, int numBorrow){
+		
+		System.out.println("No Item Borrowed ");
+		numItem = numItem + numBorrow;
+		//return numItem;
+		//System.out.println("items borrowed : " + (numItem + numBorrow));
+			
+	}
+	
+	
+	void renew(int numItem, int numRenew){
+		System.out.println("No item Renewed");
+		numItem = numItem - numRenew;
+		//return numRenew;
+		
+	}
+	
+	void returnItem(int numItem, int numReturn) {
+		System.out.println("Item returned");
+		
+	}
+	
+	void update(int numItem, int numBorrow, int numReturn) {
 				
-			
-		}
-		@Override
-		void update() {
-			
-				System.out.println("Updated member account with returned Items");
-								
-		}
-		void delete(){
-			System.out.println("Removed Items:" +numItem);
-		}
-		public boolean setReturnItem(boolean returnItem) {
-			this.returnItem = returnItem;
-			return returnItem;
-		}
-		public boolean isReturnItem() {
-			return returnItem;
-		}
-
+		System.out.println("update member account with items returned" );
+		//return numItem;
+				
 	}
