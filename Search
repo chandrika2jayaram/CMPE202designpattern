@@ -1,0 +1,38 @@
+package edu.sjsu.library.template;
+
+public class Search extends MemberTemplate{
+
+	
+public void borrow(int numItem, int numBorrow){
+		
+		System.out.println("Item found to borrow ");
+		numItem = numItem + numBorrow;
+		//return numItem;
+		//System.out.println("items borrowed : " + (numItem + numBorrow));
+			
+	}
+	
+	
+	void renew(int numItem, int numRenew){
+		System.out.println("Item found to Renew");
+		numItem = numItem - numRenew;
+		//return numRenew;
+		
+	}
+	
+	void returnItem(int numItem, int numReturn) {
+		System.out.println("No item returned");
+		
+	}
+	
+	
+	void update(int numItem, int numBorrow, int numReturn) {
+				
+		System.out.println("Selecting an item successful" );
+		//return numItem;
+				
+	}
+		
+	}
+
+	
