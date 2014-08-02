@@ -1,0 +1,15 @@
+package abase;
+
+import java.util.List;
+
+import Member.observer.MObserver;
+
+public interface Controller<T> extends MObserver<T>{
+	 boolean create(T t);
+	    boolean create(List<T> t);
+	    boolean update(T t);
+	    boolean delete(T t);
+	    T find(String id);
+	    List<T> findAll();
+
+}
