@@ -1,0 +1,47 @@
+package Member.mstate;
+
+import java.io.Serializable;
+
+import model.LibMember;
+
+public class ActiveState implements mstate.MemberState, Serializable {
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private LibMember member;
+	public ActiveState(LibMember member) {
+		this.member = member;		
+	}
+
+	@Override
+	public boolean active(double fine) {
+		if (fine>20.00){
+			System.out.println("please pay fine to activate your account");
+			member.setState(new DelinquateState(member));
+		}else
+		{
+			member.setState(new ActiveState(member));
+		}
+		return true;
+	}
+
+	@Override
+	public boolean frozen() {
+		
+		return false;
+	}
+
+	public boolean delinquate(double finepaid) {
+		
+		return false;
+	}
+
+	@Override
+	public boolean closed() {
+		
+		return false;
+	}
+
+}
