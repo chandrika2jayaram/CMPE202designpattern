@@ -1,0 +1,10 @@
+package Member.observer;
+
+//import MObserver;
+
+public interface MSubject {
+	 public void registerObserver(MObserver o);
+	    public void removeObserver(MObserver o);
+	    public void notifyObservers();
+
+}
