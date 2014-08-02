@@ -1,0 +1,6 @@
+package Member.observer;
+
+public interface MObserver<T> {
+    public boolean update(T t);
+}
+
