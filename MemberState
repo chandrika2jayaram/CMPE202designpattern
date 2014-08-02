@@ -1,0 +1,8 @@
+package Member.mstate;
+
+public interface MemberState {
+	boolean active(double fine);	
+    boolean frozen();    
+    boolean delinquate(double finepaid);
+    boolean closed();
+}
