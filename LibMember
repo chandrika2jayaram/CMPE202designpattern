@@ -1,0 +1,118 @@
+package Member.model;
+
+
+import java.io.Serializable;
+
+import mstate.ActiveState;
+import mstate.MemberState;
+
+		
+		public class LibMember implements Serializable {
+		    
+		   /**
+			 * 
+			 */
+			private static final long serialVersionUID = 1L;
+			private MemberState mstate;
+		    private String memberId;
+		    private String firstName;
+		    private String lastName;
+		    private String address;
+		    private String phone;
+		    private String email;
+		    
+
+		    public LibMember(String memberId, String firstName, String lastName, String address, String phone, String email )
+		    {
+		    	this.memberId = memberId;
+		    	this.firstName = firstName;
+		    	this.lastName = lastName;
+		    	this.address = address;
+		    	this.phone = phone;
+		    	this. email = email;
+		    }
+		    
+		    public MemberState getState() {
+		        return mstate;
+		    }
+
+		    public void setState(MemberState mstate) {
+		        this.mstate = mstate;
+		    }
+
+		    public String getmemberId() {
+		        return memberId;
+		    }
+		     public void setMemberId(String memberId)
+		     {
+		    	 this.memberId = memberId;
+		     }
+
+		    public String getFirstName() {
+		        return firstName;
+		    }
+
+		    public void setFirstName(String firstName)
+		    {
+		    	this.firstName = firstName;
+		    }
+		    
+		    public String getLastName() {
+		        return lastName;
+		    }
+
+		    public void setLastName(String lastName)
+		    {
+		    	this.lastName = lastName;
+		    }
+		    
+		    	    
+		    public String getAddress() {
+		        return address;
+		    }
+
+		    public void setAddress(String address)
+		    {
+		    	this.address = address;
+		    }
+		    
+		  	    
+		    public String getPhone() {
+		        return phone;
+		    }
+
+		    public void setPhone(String phone)
+		    {
+		    	this.phone = phone;
+		    }
+		    
+		    public String getEmail() {
+		        return phone;
+		    }
+
+		    public void setEmail(String email)
+		    {
+		    	this.email = email;
+		    }
+		    
+		    @Override
+		    public String toString() {
+		        final StringBuilder sb = new StringBuilder("Member{");
+		        sb.append("state=").append(mstate.getClass().getName());
+		        sb.append(", memberId=").append(memberId);
+		        sb.append('}');
+		        return sb.toString();
+		    	
+		    /*	return "\n Member Id: " + memberId + "\n First Name:  " + firstName + " \n Last Name: " + lastName  + " \n Address: "
+		    	+ address + " \n phone : " + phone + " \n Email: " + email;*/
+		    		    }
+
+		/*	public void setState(ActiveState activeState) {
+				// TODO Auto-generated method stub
+				
+			}*/
+		
+
+		// TODO Auto-generated constructor stub
+	}
+		
