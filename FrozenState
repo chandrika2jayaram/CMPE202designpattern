@@ -1,0 +1,47 @@
+package Member.mstate;
+import java.io.Serializable;
+
+import model.LibMember;
+
+
+public class FrozenState implements MemberState, Serializable{
+		
+		private static final long serialVersionUID = 1L;
+		
+		private LibMember member;
+		 
+		 public FrozenState( LibMember member){
+			 this.member = member;
+		 }
+		
+		@Override
+		public boolean active(double fine){
+			System.out.println("Member state is frozen for 120 days");
+			return false;
+			
+		}
+
+		@Override
+		public boolean frozen() {
+			member.setState(new ActiveState(member));
+			return true;
+			
+		}
+
+		public boolean delinquate(double finepaid) {
+			return false;
+			
+		}
+
+		@Override
+		public boolean closed() {
+			
+			return true;
+			
+		}
+		
+		
+	}
+
+
+
