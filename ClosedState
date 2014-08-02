@@ -1,0 +1,50 @@
+package Member.mstate;
+
+
+import java.io.Serializable;
+
+import model.LibMember;
+
+public class ClosedState implements MemberState, Serializable{
+	
+	 /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	private LibMember member;
+	 
+	 public ClosedState( LibMember member){
+		 this.member = member;
+	 }
+	
+	@Override
+	public boolean active(double fine){
+		System.out.println("Membership is closed please reactivate or obtain a new membership card");
+		return false;
+		
+	}
+
+	@Override
+	public boolean frozen() {
+		System.out.println("Membership is closed please reactivate or obtain a new membership card");
+		return false;
+		
+	}
+
+	public boolean delinquate(double finepaid) {
+		System.out.println("Membership is closed - no dues");
+		return false;
+		
+	}
+
+	@Override
+	public boolean closed() {
+		System.out.println("Membership was closed - now being activated");
+		member.setState(new ActiveState(member));
+		return true;
+		
+	}
+	
+	
+}
